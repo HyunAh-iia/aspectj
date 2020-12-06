@@ -23,7 +23,7 @@ public class MyServiceTest {
     }
 
 
-    @Test
+    @Test //Success
     public void cache() {
         Object result1 = service.cache(1);
         Object result2 = service.cache(1);
@@ -31,7 +31,7 @@ public class MyServiceTest {
         Assertions.assertThat(result1).isEqualTo(result2);
     }
 
-    @Test
+    @Test //Success
     public void noCache() {
         Object result1 = service.noCache(1);
         Object result2 = service.noCache(1);
@@ -39,7 +39,7 @@ public class MyServiceTest {
         Assertions.assertThat(result1).isNotEqualTo(result2);
     }
 
-    @Test
+    @Test //Fail
     public void selfInvocation() {
         Object result1 = service.selfInvocation(1);
         Object result2 = service.selfInvocation(1);
