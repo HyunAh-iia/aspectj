@@ -1,7 +1,7 @@
 plugins {
     id 'org.springframework.boot' version '2.2.6.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-    id 'io.freefair.aspectj.post-compile-weaving' version '5.3.0'
+    id 'io.freefair.aspectj.post-compile-weaving' version '5.3.0' //lombok doesn't work in CTW, so I chose post-CTW
     id 'java'
     id 'application'
 }
@@ -42,7 +42,7 @@ dependencies {
     aspectjweaver 'org.aspectj:aspectjweaver'
     runtimeOnly configurations.aspectjweaver.dependencies
 
-    // cache
+    // Cache (if it works okay, I'll add EhCache)
     implementation 'org.springframework.boot:spring-boot-starter-cache'
 
     // Junit5
